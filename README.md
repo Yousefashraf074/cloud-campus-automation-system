@@ -216,29 +216,17 @@ curl -X POST http://localhost:5000/api/auth/register \
 
 ---
 
-## Contributing
+## Screenshots
 
-1. Fork the repository
-2. Create feature branch
-3. Make changes
-4. Test thoroughly
-5. Submit pull request
+### Login Page
+A clean, modern login experience for students, companies, and admins.
 
----
+![Login Screen](./docs/screenshots/login.png)
 
-## License
+### Student Dashboard
+Student dashboard with resume upload, application tracking, and open jobs summary.
 
-MIT License - see LICENSE file for details
-- `AWS_SECRET_ACCESS_KEY`
-- `AWS_REGION`
-- `AWS_S3_BUCKET`
-
-### Upload flow
-
-1. Student uploads a PDF from the dashboard
-2. File is transmitted using multipart form data
-3. Backend uploads to S3 and returns the file URL
-4. Student profile stores `resumeUrl`
+![Student Dashboard](./docs/screenshots/student-dashboard.png)
 
 ---
 
@@ -262,6 +250,25 @@ MIT License - see LICENSE file for details
 3. Use runtime: `Node 20`
 4. Build command:
    - `npm install`
+5. Start command:
+   - `npm start`
+
+---
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make changes
+4. Test thoroughly
+5. Submit a pull request
+
+---
+
+## License
+
+MIT License - see LICENSE file for details
+
 5. Start command:
    - `npm start`
 6. Add environment variables in Render:
