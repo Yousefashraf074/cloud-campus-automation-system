@@ -221,12 +221,14 @@ curl -X POST http://localhost:5000/api/auth/register \
 ### Login Page
 A clean, modern login experience for students, companies, and admins.
 
-![Login Screen](./docs/screenshots/login.png)
+![Login Screen]<img width="1919" height="911" alt="Screenshot 2026-04-24 222928" src="https://github.com/user-attachments/assets/15335c43-0a24-42ec-a12d-ab4dfbfd30ef" />
+
 
 ### Student Dashboard
 Student dashboard with resume upload, application tracking, and open jobs summary.
 
-![Student Dashboard](./docs/screenshots/student-dashboard.png)
+![Student Dashboard]<img width="1919" height="906" alt="Screenshot 2026-04-24 222947" src="https://github.com/user-attachments/assets/104541d6-7032-485a-a0eb-c24a451acb0b" />
+
 
 ---
 
