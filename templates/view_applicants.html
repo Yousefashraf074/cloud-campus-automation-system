@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Applicants for: {{ job.title }}</h2>
+<table>
+    <tr><th>Student</th><th>CV</th></tr>
+    {% for app in applications %}
+    <tr>
+        <td>{{ app.student.username }}</td>
+        <td>
+            {% if app.student.cv_filename %}
+                <a href="/download_cv/{{ app.student.id }}">Download CV</a>
+            {% else %}
+                No CV Uploaded
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="/dashboard">Back to Dashboard</a>
+{% endblock %}

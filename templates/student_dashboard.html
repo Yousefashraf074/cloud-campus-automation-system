@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Student Dashboard</h2>
+<form action="/upload_cv" method="POST" enctype="multipart/form-data">
+    <label>Upload/Update CV (PDF only):</label>
+    <input type="file" name="cv" accept="application/pdf" required>
+    <button type="submit">Upload</button>
+</form>
+<h3>Available Jobs/Internships</h3>
+<table>
+    <tr><th>Title</th><th>Description</th><th>Company</th><th>Action</th></tr>
+    {% for job in jobs %}
+    <tr>
+        <td>{{ job.title }}</td>
+        <td>{{ job.description }}</td>
+        <td>{{ job.company.username }}</td>
+        <td>
+            <a href="/apply/{{ job.id }}">Apply</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<h3>Your Applications</h3>
+<ul>
+    {% for app in applications %}
+        <li>{{ app.job.title }} ({{ app.job.company.username }})</li>
+    {% else %}
+        <li>No applications yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

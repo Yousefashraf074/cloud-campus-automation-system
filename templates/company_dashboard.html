@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Company Dashboard</h2>
+<a href="/post_job"><button>Post New Job/Internship</button></a>
+<h3>Your Job Posts</h3>
+<table>
+    <tr><th>Title</th><th>Description</th><th>Status</th><th>Applicants</th></tr>
+    {% for job in jobs %}
+    <tr>
+        <td>{{ job.title }}</td>
+        <td>{{ job.description }}</td>
+        <td>{% if job.approved %}Approved{% else %}Pending{% endif %}</td>
+        <td><a href="/view_applicants/{{ job.id }}">View Applicants</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

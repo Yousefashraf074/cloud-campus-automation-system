@@ -1,0 +1,52 @@
+# Root ignores
+node_modules/
+.env
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git
+.mypy_cache
+.pytest_cache
+.hypothesis
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+database.db
+instance/
+
+# Uploaded files
+static/resumes/
+static/uploads/
+
+# Backend
+/backend/node_modules/
+/backend/.env
+/backend/.env.local
+
+# Frontend
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.env
+/frontend/.env.local
